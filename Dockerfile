@@ -8,3 +8,4 @@ ONBUILD ADD . /app
 ONBUILD RUN /build/builder
 
 ENTRYPOINT ["/run.sh"]
+CMD ["/start","web"]
