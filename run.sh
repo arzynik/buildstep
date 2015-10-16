@@ -6,7 +6,12 @@ fi
 
 if [ ! -d "/app" ]; then
 	if [ -n "$GIT_REPO" ]; then
-		git clone "$GIT_REPO" /app
+		if [ -n "$GIT_BRANCH" ]; then
+			git clone -B "$GIT_BRANCH" "$GIT_REPO" /app
+		else
+			echo "No \$GIT_BRANCH environment variable defined, assuming MASTER"
+			git clone "$GIT_REPO" /app
+		fi
 		/build/builder
 	else
 		echo "No \$GIT_REPO environment variable defined"
