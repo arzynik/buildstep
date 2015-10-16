@@ -1,5 +1,5 @@
 FROM progrium/buildstep:latest
-MAINTAINER Fernando Mayo <fernando@tutum.co>
+MAINTAINER Eric <edonaldson@draconrose.com>
 
 ADD run.sh /run.sh
 RUN rm -fr /app
