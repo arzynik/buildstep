@@ -1,5 +1,5 @@
 FROM progrium/buildstep:latest
-MAINTAINER Eric <edonaldson@draconrose.com>
+MAINTAINER Devin Smith <docker@arzynik.com>
 
 USER root
 
